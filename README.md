@@ -2,9 +2,9 @@
 Routes that that do not belong to Terraform provisioned resources
 
 ## Environments
-| Environment | Workspace                   | Domain Name                    |
-|:------------|:----------------------------|:-------------------------------|
-| Production  | gavanlamb-routes-production | [gavanlamb.com](gavanlamb.com) |
+| Environment | Workspace                       | Domain Name                    |
+|:------------|:--------------------------------|:-------------------------------|
+| Production  | routes-gavanlamb-com-production | [gavanlamb.com](gavanlamb.com) |
 
 ## Apply Changes
 1. `terraform plan`
