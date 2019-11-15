@@ -1,15 +1,18 @@
-terraform {
-  backend "s3" {
-    bucket = "haplo-terraform-remote-state"
-    key = "state"
-    region = "ap-southeast-2"
-  }
-}
-
 provider "aws" {
   region = "ap-southeast-2"
   shared_credentials_file = "/Users/gavanlamb/.aws/Credentials"
-  profile = "default"
+  profile = "gavanlamb"
+}
+
+terraform {
+  backend "s3" {
+    bucket = "dr34-terraform-remote-state"
+    dynamodb_table = "terraform-remote-state-lock"
+    key = "state"
+    region = "ap-southeast-2"
+    shared_credentials_file = "/Users/gavanlamb/.aws/Credentials"
+    profile = "gavanlamb"
+  }
 }
 
 resource "aws_route53_zone" "gavanlamb-com" {
